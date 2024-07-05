@@ -62,6 +62,7 @@ h1 {
             background-color: $information;
             line-height: 1;
             padding: 5px 20px;
+            width: 100%;
             @include media-query('tab') {
                 height: 235px;
             }
@@ -69,7 +70,7 @@ h1 {
                 font-weight: bold;
             }
             img {
-                width: 4%;
+                width: 5%;
             }
         }
     }
