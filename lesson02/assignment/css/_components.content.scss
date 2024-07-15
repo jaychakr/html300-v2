@@ -15,3 +15,63 @@ html {
 h1 {
     color: $red;
 }
+
+// outer border
+.outer {
+    background-color: $outer;
+    @include media-query('lg') {
+        width: 60%;
+    }
+    @include media-query('xl') {
+        width: 50%;
+    }
+    padding: 20px;
+    @include media-query('tab') {
+        padding: 40px;
+    }
+    // inner content
+    .inner {
+        background-color: $white;
+        padding: 10px;
+        @include media-query('tab') {
+            display: flex;
+            padding: 30px 30px 0;
+        }
+        color: $text;
+        // picture, name, and job title
+        .profile {
+            text-align: center;
+            img {
+                @include media-query('tab') {
+                    height: 65%;
+                }
+                border-radius: 50%;
+            }
+            p {
+                line-height: 0.5;
+            }
+            #name {
+                font-weight: bold;
+            }
+            #title {
+                font-style: italic;
+            }
+        }
+        // personal information
+        .information {
+            background-color: $information;
+            line-height: 1;
+            padding: 5px 20px;
+            width: 100%;
+            @include media-query('tab') {
+                height: 235px;
+            }
+            span {
+                font-weight: bold;
+            }
+            img {
+                width: 5%;
+            }
+        }
+    }
+}
